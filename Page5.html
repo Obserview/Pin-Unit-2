@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background with Small Images</title>
+    <style>
+        /* 设置全屏背景图片 */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        .background {
+            position: relative;
+            height: 100vh; 
+            width: 100vw; 
+            background-image: url('p5.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+        }
+
+        /* 设置小图片 */
+        .small-image {
+            position: absolute;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        /* 不同小图片的位置和大小 */
+        .small-image1 {
+            top: 18%; 
+            left: 32%; 
+            width: 130px; 
+        }
+
+        .small-image2 {
+            top: 40%; 
+            left: 61%;  
+            width: 123px; 
+        }
+
+        .small-image3 {
+            top: 59%; 
+            left: 52%; 
+            width: 118px; 
+        }
+
+        /* 鼠标悬停时的小图片效果 */
+        .small-image:hover {
+            transform: scale(1.2); 
+            opacity: 0.8; 
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <!-- 小图片，跳转到第六页 -->
+        <img class="small-image small-image1" src="11.PNG" alt="Image 1" onclick="redirectToPage6()">
+        <img class="small-image small-image2" src="22.PNG" alt="Image 2" onclick="redirectToPage6()">
+        <img class="small-image small-image3" src="33.PNG" alt="Image 3" onclick="redirectToPage6()">
+    </div>
+
+    <script>
+        // 跳转第六页
+        function redirectToPage6() {
+            window.location.href = "page6.html"; 
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background with Resizable Image</title>
+    <style>
+        /* 设置全屏背景图片 */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        .background {
+            position: relative;
+            height: 100vh; 
+            width: 100vw; 
+            background-image: url('p6.jpg'); 
+            background-size: contain; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            cursor: pointer; 
+        }
+
+        /* 设置小图片的样式 */
+        .small-image {
+            position: absolute;
+            cursor: pointer;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        /* 设置小图片的位置和大小 */
+        .small-image1 {
+            top: 0.4%; 
+            left: 33%; 
+            width: 470px; 
+            height: 700px; 
+        }
+
+        /* 鼠标悬停时的小图片效果 */
+        .small-image:hover {
+            transform: scale(1.1); 
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <!-- 小图片，点击后跳转到第一页 -->
+        <img class="small-image small-image1" src="P6小图片.PNG" alt="Small Image" onclick="redirectToPage1()">
+    </div>
+
+    <script>
+        // 跳转到第一页
+        function redirectToPage1() {
+            window.location.href = "index.html"; 
+        }
+    </script>
+</body>
+</html>

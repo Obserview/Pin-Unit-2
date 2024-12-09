@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Background and Images</title>
+    <style>
+        /* 确保页面占满视口 */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; 
+        }
+
+        /* 背景容器样式 */
+        .background-container {
+            width: 100%;
+            height: 100vh; 
+            background-image: url('P2 beijing.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            position: relative; 
+        }
+
+        /* 图片的通用样式 */
+        .floating-image {
+            position: absolute; 
+            cursor: pointer; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        }
+
+        /* 鼠标悬停效果 */
+        .floating-image:hover {
+            transform: scale(1.1); 
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* 阴影 */
+        }
+
+        /* 第一个图片具体样式 */
+        .image-1 {
+            top: 16%; 
+            left: 20%; 
+            width: 200px; 
+            height: auto; 
+        }
+
+        /* 第二个图片具体样式 */
+        .image-2 {
+            bottom: 15%; 
+            right: 20%; 
+            width: 200px; 
+            height: auto; 
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 背景容器 -->
+    <div class="background-container">
+        <!-- 第一个图片 -->
+        <a href="Page3.html">
+            <img src="P2mao.png" alt="Pin 1" class="floating-image image-1">
+        </a>
+
+        <!-- 第二个图片 -->
+        <a href="Page3.html">
+            <img src="P2biaoge.jpg" alt="Pin 2" class="floating-image image-2">
+        </a>
+    </div>
+
+</body>
+</html>

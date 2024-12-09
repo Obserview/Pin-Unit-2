@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Images</title>
+    <style>
+        /* 设置背景 */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f2fc; 
+        }
+
+        .image-container {
+            position: relative;
+            width: 80%;
+            height: 80%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        /* 图片 */
+        .image {
+            position: absolute;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            cursor: pointer; 
+        }
+
+        /* 三张图片的大小位置 */
+        .image1 {
+            top: 10%; 
+            left: 2%; 
+            width: 500px; 
+        }
+
+        .image2 {
+            top: 14%; 
+            left: 35%; 
+            width: 90px; 
+        }
+
+        .image3 {
+            top: 20%; 
+            left: 50%; 
+            width: 500px; 
+        }
+
+        /* 鼠标悬停时 */
+        .image:hover {
+            transform: scale(1.1);
+            opacity: 0.9; 
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <!-- 三张图片，点击后跳转到第四页 -->
+        <img class="image image1" src="p3zuo.png" alt="Image 1" onclick="redirectToPage4()">
+        <img class="image image2" src="Pin针本体2.png" alt="Image 2" onclick="redirectToPage4()">
+        <img class="image image3" src="p3you.png" alt="Image 3" onclick="redirectToPage4()">
+    </div>
+
+    <script>
+        // 跳转到第四页
+        function redirectToPage4() {
+            window.location.href = "page4.html"; 
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resizable Image</title>
+    <style>
+        /* 确保页面占满整个视口 */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0; /* 页面背景颜色（可选） */
+        }
+
+        /* 图片样式 */
+        .resizable-image {
+            width: 100%; /* 图片宽度占屏幕的 100% */
+            max-width: 1700px; /* 设置最大宽度，避免过大 */
+            height: auto; /* 高度自动调整，保持图片比例 */
+            border-radius: 10px; /* 圆角边框（可选） */
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <!-- 图片，点击后跳转到 Page2.html -->
+    <a href="Page2.html">
+        <img src="Pin P1.jpg" alt="Pin Image" class="resizable-image">
+    </a>
+
+</body>
+</html>

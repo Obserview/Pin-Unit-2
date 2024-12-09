@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Background with Hover Effect</title>
+    <style>
+        /* 设置全屏背景图片 */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        .background {
+            position: relative;
+            height: 100vh; 
+            width: 100vw; 
+            background-image: url('p4.jpg'); 
+            background-size: contain; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            cursor: pointer; 
+            transition: transform 0.3s ease, opacity 0.3s ease; 
+        }
+
+        /* 鼠标悬停效果 */
+        .background:hover {
+            transform: scale(1.05); 
+            opacity: 0.9; 
+        }
+    </style>
+</head>
+<body>
+    <div class="background" onclick="redirectToPage5()"></div>
+
+    <script>
+        // 点击跳转到第五页
+        function redirectToPage5() {
+            window.location.href = "page5.html"; 
+        }
+    </script>
+</body>
+</html>
